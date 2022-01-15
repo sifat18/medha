@@ -50,7 +50,7 @@ app.get('/init', (req, res) => {
         value_c: 'ref003_C',
         value_d: 'ref004_D'
     };
-    const sslcommer = new SSLCommerzPayment(process.env.STORE_ID, process.env.STORE_PASSWORD, true) //true for live default false for sandbox
+    const sslcommer = new SSLCommerzPayment(process.env.STORE_ID, process.env.STORE_PASSWORD, false) //true for live default false for sandbox
     sslcommer.init(data).then(data => {
         //process the response that got from sslcommerz 
         //https://developer.sslcommerz.com/doc/v4/#returned-parameters
