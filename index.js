@@ -78,8 +78,8 @@ app.post("/fail", async (req, res) => {
     //     }
     // })
 
-    // res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
-    res.json(req.body)
+    res.redirect(`https://www.medhakunjaedu.com/something-went-wrong/`)
+    // res.json(req.body)
 })
 app.post("/cancel", async (req, res) => {
 
@@ -89,8 +89,8 @@ app.post("/cancel", async (req, res) => {
     //     }
     // })
 
-    // res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
-    res.json(req.body)
+    res.redirect(`https://www.medhakunjaedu.com/something-went-wrong/`)
+    // res.json(req.body)
 })
 app.post("/ipn", async (req, res) => {
 
