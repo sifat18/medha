@@ -70,6 +70,39 @@ app.post("/success", async (req, res) => {
     // res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
     res.json(req.body)
 })
+app.post("/fail", async (req, res) => {
+
+    // const result = await orderCollection.updateOne({ tran_id: req.body.tran_id }, {
+    //     $set: {
+    //         val_id: req.body.val_id
+    //     }
+    // })
+
+    // res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
+    res.json(req.body)
+})
+app.post("/cancel", async (req, res) => {
+
+    // const result = await orderCollection.updateOne({ tran_id: req.body.tran_id }, {
+    //     $set: {
+    //         val_id: req.body.val_id
+    //     }
+    // })
+
+    // res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
+    res.json(req.body)
+})
+app.post("/ipn", async (req, res) => {
+
+    // const result = await orderCollection.updateOne({ tran_id: req.body.tran_id }, {
+    //     $set: {
+    //         val_id: req.body.val_id
+    //     }
+    // })
+
+    // res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
+    res.json(req.body)
+})
 
 
 
