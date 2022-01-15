@@ -54,7 +54,7 @@ app.get('/init', (req, res) => {
     sslcommer.init(data).then(data => {
         //process the response that got from sslcommerz 
         //https://developer.sslcommerz.com/doc/v4/#returned-parameters
-        res.json(data)
+        res.redirect(data.GatewayPageURL)
     });
 
 })
