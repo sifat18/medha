@@ -17,12 +17,12 @@ const port = process.env.PORT || 7000;
 app.get('/init', (req, res) => {
     const data = {
         total_amount: 100,
-        currency: 'EUR',
+        currency: 'BDT',
         tran_id: 'REF123',
-        success_url: 'http://yoursite.com/success',
-        fail_url: 'http://yoursite.com/fail',
-        cancel_url: 'http://yoursite.com/cancel',
-        ipn_url: 'http://yoursite.com/ipn',
+        success_url: 'https://still-escarpment-59290.herokuapp.com/success',
+        fail_url: 'https://still-escarpment-59290.herokuapp.com/fail',
+        cancel_url: 'https://still-escarpment-59290.herokuapp.com/cancel',
+        ipn_url: 'https://still-escarpment-59290.herokuapp.com/ipn',
         shipping_method: 'Courier',
         product_name: 'Computer.',
         product_category: 'Electronic',
@@ -59,6 +59,17 @@ app.get('/init', (req, res) => {
 
 })
 
+app.post("/success", async (req, res) => {
+
+    // const result = await orderCollection.updateOne({ tran_id: req.body.tran_id }, {
+    //     $set: {
+    //         val_id: req.body.val_id
+    //     }
+    // })
+
+    // res.redirect(`http://localhost:3000/success/${req.body.tran_id}`)
+    res.json(req.body)
+})
 
 
 
