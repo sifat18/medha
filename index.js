@@ -67,8 +67,8 @@ app.post("/success", async (req, res) => {
     //     }
     // })
 
-    // res.redirect(`https://www.medhakunjaedu.com/congratulations-payment-success/`)
-    res.json(req.body)
+    res.redirect(`https://www.medhakunjaedu.com/congratulations-payment-success/`)
+    // res.json(req.body)
 })
 app.post("/fail", async (req, res) => {
 
