@@ -5,6 +5,7 @@ const cors = require('cors');
 const SSLCommerzPayment = require('sslcommerz')
 require('dotenv').config()
 const { v4: uuidv4 } = require('uuid');
+const res = require('express/lib/response');
 
 const app = express()
 app.use(cors());
@@ -89,6 +90,9 @@ app.post("/cancel", async (req, res) => {
     res.json(req.body)
 })
 
+app.get(port, (req, res) => {
+    res.send(`connected 2`)
+})
 app.listen(port, () => {
-    console.log(`connected`)
+    res.send(`connected`)
 })
