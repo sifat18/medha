@@ -90,7 +90,7 @@ app.post("/cancel", async (req, res) => {
     res.json(req.body)
 })
 
-app.get(port, (req, res) => {
+app.get('/', (req, res) => {
     res.send(`connected 2`)
 })
 app.listen(port, () => {
