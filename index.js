@@ -18,7 +18,7 @@ app.get('/init', (req, res) => {
     const data = {
         total_amount: 100,
         currency: 'BDT',
-        tran_id: 'REF123',
+        tran_id: uuidv4(),
         success_url: 'https://still-escarpment-59290.herokuapp.com/success',
         fail_url: 'https://still-escarpment-59290.herokuapp.com/fail',
         cancel_url: 'https://still-escarpment-59290.herokuapp.com/cancel',
@@ -67,8 +67,8 @@ app.post("/success", async (req, res) => {
     //     }
     // })
 
-    res.redirect(`https://www.medhakunjaedu.com/congratulations-payment-success/`)
-    // res.json(req.body)
+    // res.redirect(`https://www.medhakunjaedu.com/congratulations-payment-success/`)
+    res.json(req.body)
 })
 app.post("/fail", async (req, res) => {
 
